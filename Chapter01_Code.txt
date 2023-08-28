@@ -1,0 +1,38 @@
+CREATE TABLE Emp (
+    Empcode INT,
+    EmpName VARCHAR(50),
+    DOB DATE
+);
+
+create table empdata(
+empcode  number(4,0),   
+empname varchar2(10),   
+dob date,   
+salary     number(7,2),   
+constraint pk_emp primary key (empcode),   
+)
+
+
+create table emp_master(
+empcode  number(4,0),   
+empname varchar2(10),   
+deptcode    number(4,0),   
+constraint pk_emp primary key (empcode),  
+constraint fk_deptcode foreign key (deptcode) references dept_master (deptcode)  
+)
+
+create table emp_master(
+empcode  number(4,0),   
+empname varchar2(10),   
+deptcode    number(4,0),   
+constraint pk_emp primary key (empcode),  
+constraint uk_empdept unique (empcode,deptcode) 
+)
+
+create table empdata(   
+  empname    number(4,0),   
+  empcode    varchar2(10),   
+  salary      number(7,2),   
+ dob date
+  )
+

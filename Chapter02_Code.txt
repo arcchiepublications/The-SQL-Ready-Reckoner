@@ -1,0 +1,27 @@
+SELECT EmpCode , EmpName FROM EMP;
+SELECT (column1,column2, column3… ) FROM(table1, table2, table3 ….) 
+WHERE (<condition> )
+GROUP BY (<column>)
+ HAVING (<group condition>)
+ ORDER BY (<column name/column names>)
+
+SELECT EmpCode FROM EMP;
+SELECT EmpName FROM EMP;
+SELECT DeptCode FROM EMP;
+
+Select EmpCode , EmpName   From EMP Where DeptCode=’HR’;
+
+Select  * from EMP where Where DeptCode=’HR’;
+SELECT (column1,column2,…. ) FROM(table1,table2 .. ) ;
+WHERE (row restriction/condition1 And/OR row restriction/condition2) ;
+Select  * from EMP where Where DeptCode=’HR’ OR DEPTCODE=’IT’;
+SELECT * FROM EMP WHERE JOB=‘CLERK’;
+SELECT * FROM EMP WHERE HIREDATE>’03-FEB-81’;
+
+SELECT * FROM EMP WHERE  JOB=‘CLERK’ AND SAL>950;
+SELECT * FROM EMP WHERE NOT SAL>3000;
+SELECT * FROM EMP WHERE  SAL NOT IN(3000,1250);
+SELECT * FROM EMP WHERE  JOB<>’ANALYST’;
+SELECT * FROM EMP WHERE HIREDATE<‘20-FEB-81’;
+SELECT * FROM EMP  WHERE  DEPTNO IN(10,20);
+SELECT *  FROM EMP WHERE SAL BETWEEN  2975 AND 5000

@@ -1,0 +1,46 @@
+create table emp ( 
+    empcode number not null constraint emp_pk primary key, 
+    deptcode number, 
+    empname varchar2(25), 
+    job varchar2(10), 
+    sal number, 
+    hiredate date, 
+    phonenumber number);
+
+insert into emp   values(1, 'HR','John','CLARK', 100000, to_date('01-09-1980','dd-mm-yyyy'), 12345678);
+insert into emp  values( 2, 'HR','Sharma','ANALYST', 120000, to_date('02-02-1999','dd-mm-yyyy'), null );
+
+insert into emp  values(3, 'IT','Guptash','DEVELOPER', 5000,to_date('03-01-1972','dd-mm-yyyy'),12345678);
+
+insert into emp   values(00004, 'FIN','Singhs','ACCOUNTANT', 1000, to_date('04-07-1972','dd-mm-yyyy'), 12345678);
+
+insert into emp values( 00005, 'PROD','Peter','ENGG', 6000, to_date('05-08-1980','dd-mm-yyyy'),null);
+
+insert into emp values(00006, 'PROD','shwam','EPAINTER', 8000, to_date('06-03-1980','dd-mm-yyyy'),12345678);
+    
+insert into emp values(00007, 'IT','Saxenash','DBA', 12000, to_date('30-03-1900','dd-mm-yyyy'),null);
+
+insert into emp values(00008, 'SALES','mishcal','MANAGER', 15000, to_date('08-10-1988','dd-mm-yyyy'),12345678);
+
+insert into emp values(00009, 'SALES','ashats','EXECUTIVE', 20000, to_date('09-12-1980','dd-mm-yyyy'),12345678);
+
+insert into emp values(00010,'EXCIS','ragshma','CONSULTANT', 14000, to_date('10-01-1996','dd-mm-yyyy'),12345678);
+Select count(*) from emp;
+
+Select EmpCode AS "Employee Code",DeptCode AS "Department",empname AS "Name",job AS "JOB",(sal+5000)AS "NEWSAL" from emp;
+
+SELECT DISTINCT column_name FROM table_name;
+Select distinct deptcode from emp;
+SELECT COUNT(DISTINCT column_name) FROM table_name;
+Select count(distinct deptcode) AS " Number of Departments" from emp;
+SELECT MAX(DISTINCT column_name)FROM table_name;
+Select distinct sal from emp;	Select max (distinct sal) from emp;
+SELECT avg(DISTINCT column_name)FROM table_name;
+Select avg (distinct sal) from emp;
+SELECT DISTINCT column_name1,column_name2 FROM table_name;
+Select deptcode , empname from emp;
+Select distinct deptcode , empname from emp;
+Select * from EMP;
+Select 'Employee '||empcode||' named '||empname||' belongs to '||deptcode AS "EMPLOYEE DETAILS "from emp;
+SELECT empname||q'['s]'||' Department' ||' is '|| deptcode AS "Employee Department" from emp;
+

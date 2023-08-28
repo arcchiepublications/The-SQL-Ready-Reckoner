@@ -1,0 +1,95 @@
+Chapter 7
+SQL Sequence, Views, Index, and Synonym
+CODE BUNDLE - SEQUENCE
+Example1:
+SQL>CREATE SEQUENCE sequence_test1
+ start with 1
+ increment by 1
+ minvalue 0
+ maxvalue 100
+ CYCLE;
+
+Example2:
+SQL>CREATE SEQUENCE sequence_test2 
+start with 100 
+increment by -1
+minvalue 1 
+maxvalue 100 
+CYCLE;
+
+CREATE TABLE Sequence_Table
+( 
+ID number(10),
+NAME char(20)
+);
+INSERT into Sequence_Table VALUES (sequence_test1.nextval, 'Ram');
+INSERT into Sequence_Table VALUES (sequence_test1.nextval, 'Anant');
+Example 3:
+SQL>CREATE SEQUENCE sequence_test3
+          INCREMENT BY 1
+          START WITH 1
+          NOMAXVALUE
+          NOCYCLE
+          CACHE 10;
+
+ALTER SEQUENCE sequence_test3
+         INCREMENT BY 10
+         MAXVALUE 20000
+         CYCLE
+         CACHE 20;
+
+DROP SEQUENCE Sequence_test3 ;
+
+select sequence_test3.nextval from dual;
+select sequence_test3.currval from dual;
+
+CODE BUNDLE – Views
+Example 1: Creating View from a single table:
+CREATE VIEW STUDENT_ADD
+AS SELECT StudentName, Address 
+FROM STUDENT_PER 
+WHERE StudentID < 5;
+
+SELECT * FROM STUDENT_ADD;
+
+Example 2: Creating View from multiple tables:
+CREATE VIEW STUDENT_MARKS  AS SELECT STUDENT_MASTER.StudentID, STUDENT_MASTER.StudentName, STUDENT_MASTER.Marks , STUDENT_PER.Address, STUDENT_PER.Age  FROM STUDENT_MASTER, STUDENT_PER WHERE STUDENT_MASTER. StudentID = STUDENT_PER. StudentID;
+Select * from STUDENT_MARKS;
+
+DROP View STUDENT_ADD;
+
+CREATE OR REPLACE VIEW STUDENT_MARKS 
+AS 
+SELECT STUDENT_MASTER.StudentID,STUDENT_MASTER.StudentName, STUDENT_MASTER.Marks, STUDENT_PER.Address FROM STUDENT_MASTER, STUDENT_PER WHERE STUDENT_MASTER. StudentID = STUDENT_PER. StudentID;
+Select * from STUDENT_MARKS;
+SELECT * FROM STUDENT_ADD;
+INSERT INTO STUDENT_ADD (StudentName, Address) VALUES("Shivansh","Noida");
+SELECT * from STUDENT_ADD;
+DELETE FROM STUDENT_ADD WHERE NAME="Shivansh";
+ALTER VIEW viewname COMPILE;
+
+CODE BUNDLE – Index
+CREATE INDEX Simple_idx ON STUDENT_PER (StudentID); 
+CREATE INDEX COMPLEX_idx ON STUDENT_PER (StudentID, Age);
+SELECT index_name, table_name FROM USER_INDEXES;
+SELECT index_name, table_name FROM USER_INDEXES WHERE table_name= ‘STUDENT_PER’;
+ALTER INDEX COMPLEX_idx REBUILD
+
+
+CODE BUNDLE – Synonym
+
+CREATE SYNONYM STUDENT FOR STUDENT_PER; 
+SELECT * FROM  STUDENT;
+SELECT synonym_name, table_name, table owner FROM USER_SYNONYMS; 
+DROP SYNONYM STUDENT
+
+
+
+
+
+
+
+
+
+
+

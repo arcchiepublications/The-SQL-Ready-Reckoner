@@ -1,0 +1,33 @@
+Select empname, job,sal,deptcode,hiredate from emp where deptcode=(select deptcode from dept_master where deptname=’Sales team’;
+
+
+SELECT  empname,job,sal, deptcode,hiredate FROM emp;
+WHERE deptcode = (SELECT deptcode  FROM dept_master where deptname=’Sales Team');
+
+SELECT empname,sal FROM   emp;
+WHERE  sal   IN (SELECT sal FROM   emp WHERE empname IN ('Sharma','Singhs','Ragshma'));
+SELECT empname,sal FROM   emp;
+WHERE  sal  > ANY  (SELECT sal FROM   emp WHERE empname IN ('Sharma','Singhs','Ragshma'));
+
+SELECT empname,sal FROM   emp;
+WHERE  sal  > ALL (SELECT sal FROM   emp WHERE empname IN ('Shwam','Singhs','Peter'));
+
+SELECT empname,sal,deptcode FROM   emp WHERE  (deptcode,sal)  IN           
+(SELECT deptcode,max(sal) FROM   emp WHERE  deptcode='IT'
+GROUP BY deptcode)
+SELECT empname,job 
+FROM   emp  
+WHERE  job in 
+(SELECT    job 
+ FROM      emp 
+ GROUP BY  job  
+          having 
+            count(*) in 
+                (SELECT MAX(COUNT(*)) 
+                 FROM   emp 
+                 GROUP  by job));
+
+Select empname , sal, deptcode from emp A
+Where sal>
+(select avg(sal) from emp where deptcode =A.deptcode);
+

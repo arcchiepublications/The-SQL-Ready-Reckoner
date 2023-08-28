@@ -1,0 +1,42 @@
+Select empcode, empname, sal from emp orderby sal;
+Select empcode, empname, sal from emp orderby sal desc;
+
+Select empcode, empname, sal from emp orderby empname desc;
+
+Select empcode, empname, sal from emp orderby 3;
+
+Select empcode,empname,deptcode,job,sal,Hiredate as "Job Start Date" from emp order by “Job Start Date" desc;
+
+SELECT <column1>, <column2>, <column3>
+	FROM <table name>
+	ORDER BY column1, column2, column3;
+
+Select empcode,empname,deptcode,job,sal  from emp order by empname,sal;
+Select empcode,empname,deptcode,job,sal  from emp order by empname,sal desc;
+Select count(*), deptcode from emp group by deptcode;
+Select count(*), job  from emp group by job;
+Select avg(sal), job  from emp group by job;
+Select max(sal), job  from emp group by job;
+Select sum(sal), job  from emp group by job;
+
+SELECT 1h.order_number ,COUNT(ool.line_id) line_count
+FROM txt_order_headers_all ooh ,txt_order_lines_all ool
+WHERE 1h.header_id       =  ool.header_id
+AND TRUNC(1h.creation_date) >= TRUNC(SYSDATE) - 50 
+GROUP BY 1h.order_number
+ HAVING COUNT(ool.line_id)  >  5
+ ORDER BY 1h.order_number asc;
+
+Select count(*), deptcode from emp group by job;
+Select avg(sal), job  from emp group deptcode;
+Select count(*), deptcode from emp;
+Select avg(sal), job  from emp;
+Select count(*), deptno,job  from emp where count(*)>4 groupby deptno;
+Select count(*), deptcode,job  from emp groupby deptcode having count(*)>1;
+Select avg(sal), job  from emp  where avg(sal) >=300 groupby;
+
+Select avg(sal), job  from emp  group by job having avg(sal)>=3000;
+Select count(*),  from emp group by deptcode;
+Select max(count(*)),  from emp group by deptcode;
+
+

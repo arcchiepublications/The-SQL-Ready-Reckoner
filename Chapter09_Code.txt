@@ -1,0 +1,28 @@
+Chapter 9
+SQL Joins
+CODE BUNDLE – 
+Example 1: Now we will see how inner join works using the table referred in the start of the Chapter.
+Let’s find the name and age of the student enrolled in the courses.
+SELECT STUDENTCOURSE_JOIN.COURSE_ID, STUDENT_JOIN.NAME, STUDENT_JOIN.AGE
+FROM STUDENT_JOIN
+INNER JOIN ON STUDENT_JOIN.ROLL_NO = STUDENTCOURSE_JOIN.ROLL_NO;
+OUTPUT: INNER JOIN
+
+Example2: Now we will see how LEFT OUTE JOIN works using the table referred in the start of the Chapter. 
+SELECT STUDENT_JOIN.NAME, STUDENTCOURSE_JOIN.COURSE_ID
+FROM STUDENT_JOIN
+LEFT JOIN STUDENTCOURSE_JOIN  
+ON STUDENTCOURSE_JOIN.ROLL_NO = STUDENT_JOIN.ROLL_NO 
+
+Example 3:Now we will see how RIGHT OUTER JOIN works using the table referred in the start of the Chapter.
+SELECT STUDENT_JOIN.NAME, STUDENTCOURSE_JOIN.COURSE_ID
+FROM STUDENT_JOIN
+RIGHT JOIN STUDENTCOURSE_JOIN  
+ON STUDENTCOURSE_JOIN.ROLL_NO = STUDENT_JOIN.ROLL_NO 
+
+Example 4: Now we will see how FULL OUTER JOIN works using the tables referred in the start of the Chapter.
+SELECT STUDENT_JOIN.NAME, STUDENTCOURSE_JOIN.COURSE_ID
+FROM STUDENT_JOIN
+FULL JOIN STUDENTCOURSE_JOIN  
+ON STUDENTCOURSE_JOIN.ROLL_NO = STUDENT_JOIN.ROLL_NO 
+
