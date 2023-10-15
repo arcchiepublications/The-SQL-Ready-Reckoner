@@ -43,7 +43,7 @@ DROP SEQUENCE Sequence_test3 ;
 select sequence_test3.nextval from dual;
 select sequence_test3.currval from dual;
 
-CODE BUNDLE – Views
+CODE BUNDLE â€“ Views
 Example 1: Creating View from a single table:
 CREATE VIEW STUDENT_ADD
 AS SELECT StudentName, Address 
@@ -68,15 +68,15 @@ SELECT * from STUDENT_ADD;
 DELETE FROM STUDENT_ADD WHERE NAME="Shivansh";
 ALTER VIEW viewname COMPILE;
 
-CODE BUNDLE – Index
+CODE BUNDLE â€“ Index
 CREATE INDEX Simple_idx ON STUDENT_PER (StudentID); 
 CREATE INDEX COMPLEX_idx ON STUDENT_PER (StudentID, Age);
 SELECT index_name, table_name FROM USER_INDEXES;
-SELECT index_name, table_name FROM USER_INDEXES WHERE table_name= ‘STUDENT_PER’;
+SELECT index_name, table_name FROM USER_INDEXES WHERE table_name= â€˜STUDENT_PERâ€™;
 ALTER INDEX COMPLEX_idx REBUILD
 
 
-CODE BUNDLE – Synonym
+CODE BUNDLE â€“ Synonym
 
 CREATE SYNONYM STUDENT FOR STUDENT_PER; 
 SELECT * FROM  STUDENT;
