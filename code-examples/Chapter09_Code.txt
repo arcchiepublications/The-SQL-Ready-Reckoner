@@ -1,8 +1,8 @@
 Chapter 9
 SQL Joins
-CODE BUNDLE – 
+CODE BUNDLE â€“ 
 Example 1: Now we will see how inner join works using the table referred in the start of the Chapter.
-Let’s find the name and age of the student enrolled in the courses.
+Letâ€™s find the name and age of the student enrolled in the courses.
 SELECT STUDENTCOURSE_JOIN.COURSE_ID, STUDENT_JOIN.NAME, STUDENT_JOIN.AGE
 FROM STUDENT_JOIN
 INNER JOIN ON STUDENT_JOIN.ROLL_NO = STUDENTCOURSE_JOIN.ROLL_NO;
