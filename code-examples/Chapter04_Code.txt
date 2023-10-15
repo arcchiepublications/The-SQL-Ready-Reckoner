@@ -5,7 +5,7 @@ Select empcode, empname, sal from emp orderby empname desc;
 
 Select empcode, empname, sal from emp orderby 3;
 
-Select empcode,empname,deptcode,job,sal,Hiredate as "Job Start Date" from emp order by “Job Start Date" desc;
+Select empcode,empname,deptcode,job,sal,Hiredate as "Job Start Date" from emp order by â€œJob Start Date" desc;
 
 SELECT <column1>, <column2>, <column3>
 	FROM <table name>
