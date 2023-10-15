@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the repository for the book [The SQL Ready Reckoner](https://www.amazon.in/dp/B0CL3F71GD) published by [ARCCHIE](https://arcchieonline.com). This repository contains resources, code examples, and supplementary materials related to the book. Whether you're a reader of the book or an author, this readme provides essential information about the repository's contents.
+Welcome to the repository for the book [The SQL Ready Reckoner](https://www.amazon.in/dp/B0CL3F71GD) published by [Arcchie Publications](https://arcchieonline.com). This repository contains resources, code examples, and supplementary materials related to the book. Whether you're a reader of the book or an author, this readme provides essential information about the repository's contents.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Welcome to the repository for the book [The SQL Ready Reckoner](https://www.amaz
 7. [License](#license)
 
 ## About the Book
-<a href="https://arcchieonline.com/books"><img src="https://github.com/arcchiepublications/Learn_SQL-Quick_Guide/assets/141524635/7bb7e1ed-0813-49ff-ad6e-f1bf5a829034" height="300px" align="right"></a>
+<a href="https://arcchieonline.com/books"><img src="https://m.media-amazon.com/images/I/71CoVef1cpL._SL1500_.jpg" height="300px" align="right"></a>
 _The SQL Ready Reckoner - Your Essential Guide to Mastering SQL_ is carefully crafted to be your trusted companion on the journey to becoming proficient in Structured Query Language (SQL). Whether you're a newcomer to the world of databases or a seasoned IT professional seeking a quick reference, this book is designed to meet your needs. In an era dominated by data, SQL has become an indispensable tool. From managing vast datasets to extracting valuable insights, SQL is the language of choice for interacting with relational databases. However, learning a new programming language can be daunting, especially if you're starting.  This book was born from a simple but profound idea: to make SQL learning accessible, practical, and enjoyable for everyone. We understand that not everyone comes from an IT background, and that's fine. SQL Ready Reckoner is here to bridge that gap. SQL Ready Reckoner is not your typical SQL textbook. We've distilled complex concepts into plain language and practical examples. Whether you're aiming to build a solid foundation or looking to sharpen your SQL skills, this book covers it all. SQL Ready Reckoner is for anyone who wants to harness the power of SQL. Whether you're a student, a database administrator, a developer, or an aspiring data analyst, you'll find valuable insights and guidance within these pages. We dedicate this book to individuals like you who are enthusiastic about learning and leveraging SQL's capabilities. Your desire for knowledge and commitment to mastering SQL serve as our inspiration. Let us embark together on this odyssey of discovery, innovation, and limitless imagination. In conclusion, this book stands as a testament to the power of collaboration and community. A lot of individuals mentioned played a pivotal role in bringing this project to fruition, and we are truly grateful for their involvement.
 
 
