@@ -1,0 +1,60 @@
+SELECT   ENAME,DEPTCODE   
+FROM       EMP 
+WHERE    DEPTCODE=’IT’;
+
+SELECT ENAME , SAL  
+FROM     EMP 
+WHERE  DEPTCODE=FIN;
+
+SELECT   NAME , SAL   
+FROM       EMP 
+WHERE    DEPTNO=50;
+
+SELECT NAME ,  MGR  
+FROM     EMP 
+WHERE  DEPTNO=100;
+
+
+Select job from emp where deptcode=’IT’
+Union
+Select job from emp where deptcode=’HR’;
+
+Select job from emp where deptcode=’IT’
+Union
+Select job from emp where deptcode=’HR’ order by JOB;
+
+Select job from emp where deptcode=’IT’
+Union ALL
+Select job from emp where deptcode=’HR’;
+
+Select job from emp where deptcode=’IT’
+Union ALL
+Select job from emp where deptcode=’HR’ order by JOB;
+
+Select job from emp where deptcode=’IT’
+INTERSECT
+Select job from emp where deptcode=’HR’;
+
+Select job from emp where deptcode=’IT’
+INTERSECT
+Select job from emp where deptcode=’HR’
+INTERSECT
+Select job from emp where deptcode=’SALES’;
+
+Select job from emp where deptcode=’IT’
+MINUS
+Select job from emp where deptcode=’HR’;
+
+Select job from emp where deptcode=’IT’
+MINUS
+Select job from emp where deptcode=’HR’
+MINUS
+Select job from emp where deptcode=’SALES’;
+
+Select job from emp where deptcode=’IT’;
+
+Select job from emp where deptcode=’HR’;
+
+
+
+
