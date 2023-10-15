@@ -1,8 +1,8 @@
-Select empname, job,sal,deptcode,hiredate from emp where deptcode=(select deptcode from dept_master where deptname=’Sales team’;
+Select empname, job,sal,deptcode,hiredate from emp where deptcode=(select deptcode from dept_master where deptname=â€™Sales teamâ€™;
 
 
 SELECT  empname,job,sal, deptcode,hiredate FROM emp;
-WHERE deptcode = (SELECT deptcode  FROM dept_master where deptname=’Sales Team');
+WHERE deptcode = (SELECT deptcode  FROM dept_master where deptname=â€™Sales Team');
 
 SELECT empname,sal FROM   emp;
 WHERE  sal   IN (SELECT sal FROM   emp WHERE empname IN ('Sharma','Singhs','Ragshma'));
