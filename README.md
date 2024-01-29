@@ -13,6 +13,7 @@ Welcome to the repository for the book [The SQL Ready Reckoner](https://www.amaz
 5. [Aabout the Authors](#about-the-authors)
 6. [Feedback and Contributions](#feedback-and-contributions)
 7. [License](#license)
+8. [Community](#community)
 
 ## About the Book
 <a href="https://arcchieonline.com/books"><img src="https://m.media-amazon.com/images/I/71CoVef1cpL._SL1500_.jpg" height="300px" align="right"></a>
@@ -63,4 +64,5 @@ This repository and its contents are licensed under [MIT License]. Please review
 
 Happy reading and coding!
 
-Join Our communit at: [Discord](https://discord.gg/z26SenmpEt)
+## Community
+Join Our community at: [Discord](https://discord.gg/z26SenmpEt)
